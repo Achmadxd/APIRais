@@ -1,7 +1,7 @@
 <?php
 $con = mysqli_connect("localhost", "root", "", "dbrentalsepeda");
 
-$sql = "SELECT * from tbuser";
+$sql = "SELECT * from tbuser where roleuser = '1'";
 $json["result"] = array();
 $result = mysqli_query($con, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
